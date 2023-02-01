@@ -18,14 +18,16 @@ console.log(`el valor es ${value()}`)
 //Nivel 3
 //Ex. 1
 let arr = [];
-for(let i = 0; i < 9; i ++){
+for(let i = 0; i < 10; i++){
   arr.push(function(){
-    console.log(i);
+    for(let i = 0; i < 10; i++){
+      console.log(i);
+    }
   })
 }
-for(let i = 0; i < arr.length; i++){
-  console.log(i)
-}
+arr.forEach(element => {
+  element();
+});
 //Ex. 2
 const naming = (function(nombre) {
   console.log(nombre); 
