@@ -23,36 +23,36 @@ let user = new Persona("Jose");
 user.dirNom();
 //Nivel 3
 //Ex 1.
-class Abstract{
-    constructor() {
-        if(new.target == Abstract){
+class Vehiculo{
+    constructor(ruedas) {
+        this.ruedas = ruedas;
+        if(new.target == Vehiculo){
             throw new TypeError("Cannot construct instances directly");
-        }  
+        }
     }
 }
-const ab = new Abstract();
-console.log(ab);
-class TypeOne extends Abstract{
-    constructor(){
-        super();
+class Coche extends Vehiculo{
+    constructor(ruedas){
+        super(ruedas);
     }
 }
-class TypeTwo extends Abstract{
-    constructor() {
-        super();
+class Moto extends Vehiculo{
+    constructor(ruedas) {
+        super(ruedas);
     }
 }
-function builder(type){
+function builder(ruedas, type){
     switch(type){
         case "type1":
-            return new TypeOne();
+            return new Coche(ruedas);
         case "type2":
-            return new TypeTwo();
+            return new Moto(ruedas);
         default:
             throw new Error("Invalid type");
     }
-    return new Abstract();
 }
-const objOne = builder("type1");
-console.log(objOne);
+const objOne = builder(2,"type2");
+const objTwo = builder(4,"type1");
 
+console.log(objOne);
+console.log(objTwo);
