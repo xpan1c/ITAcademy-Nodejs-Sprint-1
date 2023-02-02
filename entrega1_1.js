@@ -1,6 +1,6 @@
 //Nivel 1
 //Ex. 1
-let user = "pepe";
+let user = "Pepe";
 function userName(name) {
   console.log(name);
 }
@@ -19,15 +19,15 @@ console.log(`el valor es ${value()}`)
 //Ex. 1
 let arr = [];
 for(let i = 0; i < 10; i++){
-  arr.push(function(){
-    for(let i = 0; i < 10; i++){
+  arr.push(()=>{
+   for(let i = 0; i < 10; i++){
       console.log(i);
     }
   })
 }
-arr.forEach(element => {
-  element();
-});
+arr.forEach(element =>
+  element()
+);
 //Ex. 2
 const naming = (function(nombre) {
   console.log(nombre); 
