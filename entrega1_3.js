@@ -17,3 +17,17 @@ a(2)
 a("a")
 .then( message => console.log(message))
 .catch(error => console.log(error));
+//Ex. 2
+const stringChecker  = (parametro,callback)=>{
+    console.log(callback(parametro));
+}
+const cb = parametro =>{
+    if(typeof parametro === 'string'){
+        return `El parametro ${parametro} es un String`;
+    }else{
+        return `El parametro ${parametro} no es un String`;
+    }
+}; 
+stringChecker("Juan", cb);
+stringChecker(2, cb);
+
