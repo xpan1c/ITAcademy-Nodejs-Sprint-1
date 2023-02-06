@@ -56,6 +56,7 @@ Crea una arrow function que reciba un parámetro y una función callback y le pa
 
 Dados los objetos employees y salaries, crea una arrow function getEmployee() que retorne una Promise efectuando la búsqueda en el objeto por su id.
 
+```javascript
 let employees = [
   { id: 1, name: 'Linux Torvalds' },
   { id: 2, name: 'Bill Gates' },
@@ -67,7 +68,7 @@ let salaries = [
   { id: 2, salary: 1000 },
   { id: 3, salary: 2000 }
 ];
-
+```
 - Ejercicio 3
 
 Crea otra arrow function getSalary() similar a la anterior que reciba como parámetro un objeto employee y retorne su salario.
