@@ -1,90 +1,80 @@
-# sprint_1
-Temes - Sprint 1
+#Sprint 1: - Ejercicios de Node.js en ITAcademy
 
-Entorn del Desenvolupament
+Este repositorio contiene  - ejercicios del Sprint 1 realizados en el curso de Node.js en ITAcademy. El sprint incluye los siguientes temas:
 
-JavaScript
+    Entorno de Desarrollo
+    JavaScript
+    Node.js
 
-Node.js
+##Entrega 1.1: Functions & Template Literals
+###Nivel 1
+- Ejercicio 1
 
-Entrega 1.1: Functions & Template Literals
+Crea una función que muestre por consola el nombre de usuario/aria al invocarla, pasándole el nombre como parámetro.
+###Nivel 2
+- Ejercicio 1
 
-Nivell 1
-- Exercici 1
-Crea una funció que mostri per consola el nom d'usuari/ària en invocar-la passant-li el nom com a paràmetre.
+Muestra por consola el nombre y apellidos del usuario/aria mediante template literals, guardándolos en variables y referenciándolos en la impresión del mensaje.
+- Ejercicio 2
 
-Nivell 2
-- Exercici 1
-Mostra per consola el nom i cognoms de l'usuari/ària mitjançant template literals, guardant-los en variables i referenciant-les en la impressió del missatge.
+Invocar una función que retorne un valor desde dentro de una template literal.
+###Nivel 3
+- Ejercicio 1
 
-- Exercici 2
-Invoca una funció que retorni un valor des de dins d'una template literal.
+Crea una matriz de diez funciones y llénala mediante un bucle de manera que cada función cuente de 0 a 9 por la consola. Invoca cada función del array iterativamente. Deberá mostrarse por consola el conteo de 0 a 9 diez veces.
+- Ejercicio 2
 
-Nivell 3
-- Exercici 1
-Crea una matriu de deu funcions i emplena-la mitjançant un bucle de manera que cada funció compti del 0 al 9 per la consola. Invoca cada funció de l'array iterativament. Haurà de mostrar-se per consola el compte del 0 al 9 deu vegades.
+Crea una función anónima autoinvocable igualada a una variable que muestre por consola el nombre del usuario/aria recibido como parámetro.
+##Entrega 1.2: Classes & Arrow Functions
+###Nivel 1
+- Ejercicio 1
 
-- Exercici 2
-Crea una funció anònima autoinvocable igualada a una variable que mostri per consola el nom de l'usuari/ària a rebut com a paràmetre.
+Muestra por la consola el resultado de una arrow function autoinvocable que sume dos números.
+###Nivel 2
+- Ejercicio 1
 
+Crea una arrow function que, recibido un parámetro, retorne un objeto con un atributo que tenga como valor el parámetro recibido.
+- Ejercicio 2
 
-Entrega 1.2: Classes & Arrow Functions
+Crea una clase "Persona" que reciba un parámetro 'nombre' al ser instanciada. La clase incluirá un método dirNombre que imprima por consola el parámetro 'nombre'. Invoca el método dirNombre desde fuera de la clase.
+###Nivel 3
+- Ejercicio 1
 
-Nivell 1
+Escribe una función constructor de objetos que haga instancias de una clase abstracta. Invócala con diferentes definiciones.
+##Entrega 1.3: Promises & Callbacks
+###Nivel 1
+- Ejercicio 1
 
-- Exercici 1
-Mostra per la consola el resultat d'una arrow function autoinvocable que sumi dos nombres.
+Crea una función que retorne una Promise que invoque la función resolve() o reject() que reciba. Invócala pasándole las dos funciones de manera que imprima un mensaje diferente dependiendo de si la Promise se resuelve o no.
+###Nivel 2
+- Ejercicio 1
 
-Nivell 2
-- Exercici 1
-Crea una arrow function que, rebent un paràmetre, retorni un objecte amb un atribut que tingui com a valor el paràmetre rebut.
-- Exercici 2
+Crea una arrow function que reciba un parámetro y una función callback y le pase a la función un mensaje u otro (que se imprimirá por consola) en función del parámetro recibido.
+- Ejercicio 2
 
-Crea una classe "Persona" que rebi un paràmetre 'nom' en ser instanciada. La classe inclourà un mètode dirNom que imprimeixi per consola el paràmetre 'nom'. Invoca el mètode dirNom des de fora de la classe.
-Nivell 3
-- Exercici 1
+Dados los objetos employees y salaries, crea una arrow function getEmployee() que retorne una Promise efectuando la búsqueda en el objeto por su id.
 
-Escriu una function creadora d'objectes que faci instàncies d'una classe abstracta. Invoca-la amb diferents definicions.
+yaml
 
-Entrega 1.3: Promises & Callbacks
-- Exercici 1
+let employees = [
+  { id: 1, name: 'Linux Torvalds' },
+  { id: 2, name: 'Bill Gates' },
+  { id: 3, name: 'Jeff Bezos' }
+];
 
-Crea una funció que retorni una Promise que invoqui la funció resolve() o reject() que rep. Invoca-la passant-li les dues funcions de manera que imprimeixin un missatge diferent depenent de si la Promise es resol o no.
-- Exercici 2
+let salaries = [
+  { id: 1, salary: 4000 },
+  { id: 2, salary: 1000 },
+  { id: 3, salary: 2000 }
+];
 
-Crea una arrow function que rebi un paràmetre i una funció callback i li passi a la funció un missatge o un altre (que s'imprimirà per consola) en funció del paràmetre rebut.
-Nivell 2
-- Exercici 1
+- Ejercicio 3
 
-Donats els objectes employees i salaries, crea una arrow function getEmployee() que retorni una Promise efectuant la cerca en l'objecte pel seu id.
-let employees = [{
-    id: 1,
-    name: 'Linux Torvalds'
-}, {
-    id: 2,
-    name: 'Bill Gates'
-},{
-    id: 3,
-    name: 'Jeff Bezos'
-}];
- 
-let salaries = [{
-    id: 1,
-    salary: 4000
-}, {
-    id: 2,
-    salary: 1000
-}, {
-    id: 3,
-    salary: 2000
-}];
-- Exercici 2
+Crea otra arrow function getSalary() similar a la anterior que reciba como parámetro un objeto employee y retorne su salario.
+- Ejercicio 4
 
-Crea una altra arrow function getSalary() similar a l'anterior que rebi com a paràmetre un objecte employee i retorni el seu salari.
-- Exercici 3
+Invoca la primera función getEmployee() y después getSalary() encadenando la ejecución de las dos promises de manera que se retorne por la consola el nombre del empleado/a y su salario.
+###Nivel 3
+- Ejercicio 1
 
-Invoca la primera funció getEmployee() i després getSalary() niant l'execució de les dues promises de manera que es retorni per la consola el nom de l'empleat/da i el seu salari.
-Nivell 3
-- Exercici 1
-
-Fixa un element catch a la invocació del nivell anterior que capturi qualsevol error i el mostri per la consola.
+Fija un elemento catch a la invocación del nivel anterior que capture cualquier error y lo muestre por la consola.
