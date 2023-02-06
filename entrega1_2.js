@@ -1,10 +1,10 @@
 //Nivel 1
 //Ex. 1
-let nameOne = "Juan";
-let nameTwo = "Olaf";
+let numberOne = 2;
+let nameTwo = 4;
 ((n, m) => {
-  console.log(n + " " + m);
-})(nameOne, nameTwo);
+  console.log(n + m);
+})(numberOne, nameTwo);
 //Nivel 2
 //Ex. 1
 const a = (nombre) => ({ nombre: nombre });
