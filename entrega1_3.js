@@ -30,4 +30,69 @@ const cb = parametro =>{
 }; 
 stringChecker("Juan", cb);
 stringChecker(2, cb);
+//Nivel 2
+//Ex 1
+export let employees = [{
+    id: 1,
+    name: 'Linux Torvalds'
+}, {
+    id: 2,
+    name: 'Bill Gates'
+},{
+    id: 3,
+    name: 'Jeff Bezos'
+}];
+ 
+export let salaries = [{
+    id: 1,
+    salary: 4000
+}, {
+    id: 2,
+    salary: 1000
+}, {
+    id: 3,
+    salary: 2000
+}];
+export const getEmployee = id => {
+    return new Promise((resolve, reject) => {
+        let finder = x => x.id === id;
+        if(employees.some(finder)){
+            resolve(employees.find(finder));
+        }else{
+            reject("Id is not valid")
+        }
+    })
+}
+let zero = getEmployee(0)
+.then( message => console.log(message))
+.catch(error => console.log(error));
+let two = getEmployee(2)
+.then( message => console.log(message))
+.catch(error => console.log(error));
+//Ex. 2
+export const getSalary = obj => {
+    return new Promise((resolve, reject) => {
+        let finder = x => x.id === obj.id;
+        if(salaries.some(finder)){ 
+            resolve(salaries.find(finder).salary);
+        }else{
+            reject("Id is not valid")
+        }
+    })
+}
 
+let salaryOne = getSalary(employees[2])
+.then( message => console.log(message))
+.catch(error => console.log(error));
+
+
+
+
+let alfa = getEmployee(1)
+.then(res => {
+    console.log(res.name);
+    return getSalary(res);
+})
+.then(res =>
+    console.log(res))
+.catch(error => console.log(error));
