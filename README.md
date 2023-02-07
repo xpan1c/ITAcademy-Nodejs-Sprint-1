@@ -94,9 +94,8 @@ Crea una nueva función asíncrona que llame a otra que devuelva una Promise que
 Crea una función que devuelva el doble del número que se le pasa como parámetro después de 2 segundos.
 
 Crea otra función que reciba tres números y calcule la suma de sus dobles utilizando la función anterior.
-
-### Nivel 3
+{}### Nivel 3
 
 - Ejercicio 1
 
-Forza y captura tantos errores como puedas de los niveles 1 y 2.
+Fuerza y captura tantos errores como puedas de los niveles 1 y 2.
