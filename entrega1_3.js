@@ -32,7 +32,7 @@ stringChecker("Juan", cb);
 stringChecker(2, cb);
 //Nivel 2
 //Ex 1
-export let employees = [{
+let employees = [{
     id: 1,
     name: 'Linux Torvalds'
 }, {
@@ -43,7 +43,7 @@ export let employees = [{
     name: 'Jeff Bezos'
 }];
  
-export let salaries = [{
+let salaries = [{
     id: 1,
     salary: 4000
 }, {
@@ -53,7 +53,7 @@ export let salaries = [{
     id: 3,
     salary: 2000
 }];
-export const getEmployee = id => {
+const getEmployee = id => {
     return new Promise((resolve, reject) => {
         let finder = x => x.id === id;
         if(employees.some(finder)){
@@ -70,7 +70,7 @@ let two = getEmployee(2)
 .then( message => console.log(message))
 .catch(error => console.log(error));
 //Ex. 2
-export const getSalary = obj => {
+const getSalary = obj => {
     return new Promise((resolve, reject) => {
         let finder = x => x.id === obj.id;
         if(salaries.some(finder)){ 
