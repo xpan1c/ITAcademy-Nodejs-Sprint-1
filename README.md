@@ -46,11 +46,11 @@ Escribe una función constructor de objetos que haga instancias de una clase abs
 - Ejercicio 1
 
 Crea una función que retorne una Promise que invoque la función resolve() o reject() que reciba. Invócala pasándole las dos funciones de manera que imprima un mensaje diferente dependiendo de si la Promise se resuelve o no.
+- Ejercicio 2
+Crea una arrow function que reciba un parámetro y una función callback y le pase a la función un mensaje u otro (que se imprimirá por consola) en función del parámetro recibido.
+
 ### Nivel 2
 - Ejercicio 1
-
-Crea una arrow function que reciba un parámetro y una función callback y le pase a la función un mensaje u otro (que se imprimirá por consola) en función del parámetro recibido.
-- Ejercicio 2
 
 Dados los objetos employees y salaries, crea una arrow function getEmployee() que retorne una Promise efectuando la búsqueda en el objeto por su id.
 
@@ -67,10 +67,10 @@ let salaries = [
   { id: 3, salary: 2000 }
 ];
 ```
-- Ejercicio 3
+- Ejercicio 2
 
 Crea otra arrow function getSalary() similar a la anterior que reciba como parámetro un objeto employee y retorne su salario.
-- Ejercicio 4
+- Ejercicio 3
 
 Invoca la primera función getEmployee() y después getSalary() anidando la ejecución de las dos promises de manera que se retorne por la consola el nombre del empleado/a y su salario.
 ### Nivel 3
@@ -94,7 +94,7 @@ Crea una nueva función asíncrona que llame a otra que devuelva una Promise que
 Crea una función que devuelva el doble del número que se le pasa como parámetro después de 2 segundos.
 
 Crea otra función que reciba tres números y calcule la suma de sus dobles utilizando la función anterior.
-{}### Nivel 3
+### Nivel 3
 
 - Ejercicio 1
 

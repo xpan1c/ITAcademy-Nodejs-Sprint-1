@@ -32,6 +32,8 @@ stringChecker("Juan", cb);
 stringChecker(2, cb);
 //Nivel 2
 //Ex 1
+
+//Ex2
 let employees = [{
     id: 1,
     name: 'Linux Torvalds'
@@ -69,7 +71,7 @@ let zero = getEmployee(0)
 let two = getEmployee(2)
 .then( message => console.log(message))
 .catch(error => console.log(error));
-//Ex. 2
+//Ex. 3
 const getSalary = obj => {
     return new Promise((resolve, reject) => {
         let finder = x => x.id === obj.id;
@@ -85,9 +87,9 @@ let salaryOne = getSalary(employees[2])
 .then( message => console.log(message))
 .catch(error => console.log(error));
 
-
-
-
+// Ex 4 
+//Nivel 3
+//Ex 1
 let alfa = getEmployee(1)
 .then(res => {
     console.log(res.name);
