@@ -52,33 +52,33 @@ let salaries = [{
 }];
 const getEmployee = id => {
     return new Promise((resolve, reject) => {
-        let finder = x => x.id === id;
-        if(employees.some(finder)){
-            resolve(employees.find(finder));
+        let finder = employees.find(x => x.id === id);
+        if(finder){
+            resolve(finder);
         }else{
-            reject("Id is not valid")
+            reject("Try again");
         }
     })
 }
-let zero = getEmployee(0)
+getEmployee(5)
 .then( message => console.log(message))
 .catch(error => console.log(error));
-let two = getEmployee(2)
+getEmployee(2)
 .then( message => console.log(message))
 .catch(error => console.log(error));
 //Ex. 2
 const getSalary = obj => {
     return new Promise((resolve, reject) => {
-        let finder = x => x.id === obj.id;
-        if(salaries.some(finder)){ 
-            resolve(salaries.find(finder).salary);
+        let finder = salaries.find(x => x.id === obj.id);
+        if(finder){ 
+            resolve(finder.salary);
         }else{
             reject("Id is not valid")
         }
     })
 }
 
-let salaryOne = getSalary(employees[2])
+getSalary(employees[2])
 .then( message => console.log(message))
 .catch(error => console.log(error));
 
