@@ -1,23 +1,20 @@
 //Nivel 1
 //Ex 1.
-function a(variable){
-    return new Promise((resolve, reject) => {
-        if (typeof variable === 'string')  {
-            resolve("This argument is a String");
+const promise = function (resolve, reject){
+    return new Promise((res, rej) => {
+        if (Math.random()  > 0.5)  {
+            res(resolve());
         }else{
-            reject("This argument is not a String");
+            rej(reject());
         }
     });
 }
-
-a(2)
+const correcto = () => "Todo bien";
+const mal = () => "Todo mal";
+promise(correcto,mal)
 .then( message => console.log(message))
 .catch(error => console.log(error));
-
-a("a")
-.then( message => console.log(message))
-.catch(error => console.log(error));
-//Ex. 2
+//Ex 2
 const stringChecker  = (parametro,callback)=>{
     console.log(callback(parametro));
 }
@@ -30,10 +27,8 @@ const cb = parametro =>{
 }; 
 stringChecker("Juan", cb);
 stringChecker(2, cb);
-//Nivel 2
-//Ex 1
-
-//Ex2
+//Nivel. 2
+//Ex2 1
 let employees = [{
     id: 1,
     name: 'Linux Torvalds'
@@ -71,7 +66,7 @@ let zero = getEmployee(0)
 let two = getEmployee(2)
 .then( message => console.log(message))
 .catch(error => console.log(error));
-//Ex. 3
+//Ex. 2
 const getSalary = obj => {
     return new Promise((resolve, reject) => {
         let finder = x => x.id === obj.id;
@@ -87,14 +82,14 @@ let salaryOne = getSalary(employees[2])
 .then( message => console.log(message))
 .catch(error => console.log(error));
 
-// Ex 4 
+// Ex 3
 //Nivel 3
 //Ex 1
-let alfa = getEmployee(1)
+let employeeInfo = getEmployee(1)
 .then(res => {
-    console.log(res.name);
+    console.log(`El nombre del empleado es ${res.name}`);
     return getSalary(res);
 })
 .then(res =>
-    console.log(res))
+    console.log(`Su  salario es de ${res}`))
 .catch(error => console.log(error));
