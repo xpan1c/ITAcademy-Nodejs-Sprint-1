@@ -1,3 +1,4 @@
+// Funciones y variables de la entrega1_3
 let employees = [{
     id: 1,
     name: 'Linux Torvalds'
@@ -8,7 +9,6 @@ let employees = [{
     id: 3,
     name: 'Jeff Bezos'
 }];
- 
 let salaries = [{
     id: 1,
     salary: 4000
@@ -21,7 +21,7 @@ let salaries = [{
 }];
 const getEmployee = id => {
     return new Promise((resolve, reject) => {
-        let finder = x => x.id === id;
+        const finder = x => x.id === id;
         if(employees.some(finder)){
             resolve(employees.find(finder));
         }else{
@@ -31,7 +31,7 @@ const getEmployee = id => {
 }
 const getSalary = obj => {
     return new Promise((resolve, reject) => {
-        let finder = x => x.id === obj.id;
+        const finder = x => x.id === obj.id;
         if(salaries.some(finder)){ 
             resolve(salaries.find(finder).salary);
         }else{
@@ -42,48 +42,56 @@ const getSalary = obj => {
 // Nivel 1
 // Ex 1
 const employeeDetails = async (id) => {
-    let employeeObj = await getEmployee(id);
-    let employeeId = await getSalary(employeeObj);
-    console.log(employeeObj.name);
-    console.log(employeeId);
+    try {
+        const employeeObj = await getEmployee(id);
+        const employeeId = await getSalary(employeeObj);
+        console.log(employeeObj.name);
+        console.log(employeeId);
+    } catch (error) {
+        console.log(error);
+    }
 }
 employeeDetails(1);
 // Ex 2
-const promise = new Promise((resolve, reject) => {
+const promised = () => new Promise((resolve, reject) => {
     setTimeout(() =>{
         resolve(console.log("data back from the server"));
     } , 2000);  
 });
-const twoSeconds = async () => {
-    const pr = await promise();
-}
+(async () => await promised())();
 // Nivel 2
 // Ex 1
 
+const after2SecondsPromise = num => new Promise ((res, rej) => {
+    setTimeout(() => res(num * 2), 2000);
+    if(!num || typeof num !== 'number'){
+        rej("Necesitas un numero y que sea diferente de cero");
+    }
+}
+);
 
-const doubleNumber = num => num*2;
-const after2Seconds = num => new Promise ( 
-    r => setTimeout( () => r(doubleNumber(num)), 2000));
-
-(async () => {
-    const result = await after2Seconds(2);
-    console.log(result);
-})();
+const after2Seconds = async (num) => 
+{try {
+    const c = await after2SecondsPromise(num);
+    console.log(c);
+} catch (error) {
+    console.log(error);
+}}
+after2Seconds(1);
 
 const sumDoubles = async(numOne, numTwo, numThree) => {
-    let one = await after2Seconds(numOne);
-    let two = await after2Seconds(numTwo);
-    let three = await after2Seconds(numThree);
-    return one + two + three;
-}
-(async () => {
-    const result = await sumDoubles( 1, 2, 3);
-    console.log(result);
-})();
-/* n
-const sumDouble = (numOne, numTwo, numThree) => {
-    double(numOne) + double(numTwo) + double(numThree);
-    return this;
-}
-console.log(sumDouble(2,4,6));
-*/
+    try {
+        const a = await after2SecondsPromise(numOne + numTwo + numThree);
+        console.log(a);
+    } catch (error) {
+        console.log(error);   
+    }}
+sumDoubles(3,3,3);
+// Nivel  3
+// Ex 1
+employeeDetails(5);
+after2Seconds(0);
+after2Seconds("hola");
+after2Seconds(null);
+sumDoubles(0,0,0);
+sumDoubles(0,1,'0');
