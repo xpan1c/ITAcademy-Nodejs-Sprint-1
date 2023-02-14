@@ -1,17 +1,15 @@
 //Nivel 1
 //Ex 1.
-const promise = function (resolve, reject){
+const promise = () => {
     return new Promise((res, rej) => {
         if (Math.random()  > 0.5)  {
-            res(resolve());
+            res("Todo bien");
         }else{
-            rej(reject());
+            rej("Todo mal");
         }
     });
 }
-const correcto = () => "Todo bien";
-const mal = () => "Todo mal";
-promise(correcto,mal)
+promise()
 .then( message => console.log(message))
 .catch(error => console.log(error));
 //Ex 2
