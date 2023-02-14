@@ -99,3 +99,35 @@ Crea otra función que reciba tres números y calcule la suma de sus dobles util
 - Ejercicio 1
 
 Fuerza y captura tantos errores como puedas de los niveles 1 y 2.
+## Entrega 1.5: Node Utils
+
+### Nivel 1
+
+- Ejercicio 1
+
+Crea una función que, al ejecutarse, escriba una frase en un archivo.
+
+- Ejercicio 2
+
+Crea otra función que muestre en la consola el contenido del archivo del ejercicio anterior.
+
+- Ejercicio 3
+
+Crea una función que comprima el archivo del nivel 1.
+
+### Nivel 2
+
+- Ejercicio 1
+
+Crea una función que imprima de manera recursiva un mensaje en la consola con retrasos de un segundo.
+
+- Ejercicio 2
+
+Crea una función que liste en la consola el contenido del directorio de usuario/a del ordenador utilizando Node Child Processes.
+### Nivel 3
+- Ejercicio 1
+
+Crea una función que crea dos archivos codificados en hexadecimal y en base64 respectivamente, a partir del archivo del nivel 1.
+Crea una función que guarde los archivos del punto anterior, ahora encriptados con el algoritmo aes-192-cbc, y borre los archivos iniciales.
+Crea otra función que desencripte y descodifique los archivos del apartado anterior generando nuevamente una copia de la original.
+Incluye un README con instrucciones para la ejecución de cada parte.
