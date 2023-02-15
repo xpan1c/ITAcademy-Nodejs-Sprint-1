@@ -23,7 +23,8 @@ user.dirNom();
 //Nivel 3
 //Ex 1
 class Vehiculo {
-  constructor() {
+  constructor(nombre) {
+    this.nombre = nombre;
     if (this.constructor === Vehiculo) {
       throw new Error("no se puede instanciar una clase abstracta");
     }
@@ -34,13 +35,9 @@ class Vehiculo {
 }
 
 const creadorObj = (nombre) => {
-  class VehiculoConNombre {
-    constructor(nombre) {
-      this.nombre = nombre;
-    }
-  }
-  VehiculoConNombre.prototype = Object.create(Vehiculo.prototype);
-  return new VehiculoConNombre(nombre);
+  const obj = Object.create(Vehiculo.prototype);
+  obj.nombre = nombre;
+  return obj;
 };
 
 const moto = creadorObj("moto");
@@ -49,7 +46,11 @@ moto.tipoMotor = () => console.log("Electrico");
 const coche = creadorObj("coche");
 coche.tipoMotor = () => console.log("Combustión");
 
+//const vh = new Vehiculo();
+
 moto.tipoMotor();
 console.log(moto.nombre);
 coche.tipoMotor();
 console.log(coche.nombre);
+
+console.log({"vehiculo": moto instanceof Vehiculo});
