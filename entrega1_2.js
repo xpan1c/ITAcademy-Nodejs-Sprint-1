@@ -1,17 +1,16 @@
 //Nivel 1
 //Ex. 1
-let numberOne = 2;
-let nameTwo = 4;
-((n, m) => {
-  console.log(n + m);
-})(numberOne, nameTwo);
+const numberOne = 2;
+const numberTwo = 4;
+const suma = ((n, m) => n + m)(numberOne, numberTwo);
+console.log(suma);
 //Nivel 2
 //Ex. 1
 const a = (nombre) => ({ nombre: nombre });
 let b = a("danny");
 console.log(b.nombre);
-//Ex. 2
 class Persona {
+  //Ex. 2
   constructor(name) {
     this.name = name;
   }
@@ -22,37 +21,35 @@ class Persona {
 let user = new Persona("Jose");
 user.dirNom();
 //Nivel 3
-//Ex 1.
+//Ex 1
 class Vehiculo {
-  constructor(ruedas) {
-    this.ruedas = ruedas;
-    if (new.target == Vehiculo) {
-      throw new TypeError("Cannot construct instances directly");
+  constructor() {
+    if (this.constructor === Vehiculo) {
+      throw new Error("no se puede instanciar una clase abstracta");
     }
   }
-}
-class Coche extends Vehiculo {
-  constructor(ruedas) {
-    super(ruedas);
+  tipoMotor() {
+    throw new Error("Este metodo debe ser implementado en una instancia");
   }
 }
-class Moto extends Vehiculo {
-  constructor(ruedas) {
-    super(ruedas);
-  }
-}
-function builder(ruedas, type) {
-  switch (type) {
-    case "type1":
-      return new Coche(ruedas);
-    case "type2":
-      return new Moto(ruedas);
-    default:
-      throw new Error("Invalid type");
-  }
-}
-const objOne = builder(2, "type2");
-const objTwo = builder(4, "type1");
 
-console.log(objOne);
-console.log(objTwo);
+const creadorObj = (nombre) => {
+  class VehiculoConNombre {
+    constructor(nombre) {
+      this.nombre = nombre;
+    }
+  }
+  VehiculoConNombre.prototype = Object.create(Vehiculo.prototype);
+  return new VehiculoConNombre(nombre);
+};
+
+const moto = creadorObj("moto");
+moto.tipoMotor = () => console.log("Electrico");
+
+const coche = creadorObj("coche");
+coche.tipoMotor = () => console.log("Combustión");
+
+moto.tipoMotor();
+console.log(moto.nombre);
+coche.tipoMotor();
+console.log(coche.nombre);
