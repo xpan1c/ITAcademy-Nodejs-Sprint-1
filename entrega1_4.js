@@ -67,7 +67,7 @@ const promised = () =>
       resolve(console.log("data back from the server"));
     }, 2000);
   });
-(async () => await promised())();
+const getData = async () => await promised();
 // Nivel 2
 // Ex 1
 
