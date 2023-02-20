@@ -8,7 +8,7 @@
 5. [Entrega 4](#entrega-14-async--await)
 6. [Entrega 5](#entrega-15-node-utils)
 7. [Entrega 6](#entrega-16-testing)
-8. [Instrucciones de ejecución](#tabla-de-contenidoinstrucciones-ejecucion)
+8. [Instrucciones de ejecución de las pruebas](#instrucciones-para-ejecutar-las-pruebas)
 ## Informacion del repositorio
 Este repositorio contiene - ejercicios del Sprint 1 realizados en el curso de Node.js en ITAcademy. El sprint incluye los siguientes temas:
 
