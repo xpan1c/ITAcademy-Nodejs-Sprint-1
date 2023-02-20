@@ -1,5 +1,15 @@
 # Ejercicios de Node.js en ITAcademy - Sprint 1
 
+## Tabla de contenido
+1. [Informacion del repositorio](#informacion-del-repositorio)
+2. [Entrega 1](#entrega-11-functions--template-literals)
+3. [Entrega 2](#entrega-12-classes--arrow-functions)
+4. [Entrega 3](#entrega-13-promises--callbacks)
+5. [Entrega 4](#entrega-14-async--await)
+6. [Entrega 5](#entrega-15-node-utils)
+7. [Entrega 6](#entrega-16-testing)
+8. [Instrucciones de ejecución](#tabla-de-contenidoinstrucciones-ejecucion)
+## Informacion del repositorio
 Este repositorio contiene - ejercicios del Sprint 1 realizados en el curso de Node.js en ITAcademy. El sprint incluye los siguientes temas:
 
     Entorno de Desarrollo
@@ -163,3 +173,31 @@ Crea una función que crea dos archivos codificados en hexadecimal y en base64 r
 Crea una función que guarde los archivos del punto anterior, ahora encriptados con el algoritmo aes-192-cbc, y borre los archivos iniciales.
 Crea otra función que desencripte y descodifique los archivos del apartado anterior generando nuevamente una copia de la original.
 Incluye un README con instrucciones para la ejecución de cada parte.
+
+## Entrega 1.6: Testing
+
+### Nivel 1
+
+- Ejercicio 1
+
+Crea un archivo con las funciones sumar, restar, multiplicar y dividir dos o más operandos. Prueba la ejecución correcta de estas funciones.
+Crea los tests correspondientes para verificar el funcionamiento de las dos funciones del ejercicio Promises y Callbacks N1 E2.
+Crea los tests correspondientes para verificar el funcionamiento de las funciones del ejercicio Promises y Callbacks N2 E1 y Promises y Callbacks N2 E2 (getEmployee() y getSalary()).
+Crea los tests correspondientes para verificar el funcionamiento del ejercicio Async / Await N1 E2.
+
+## Instrucciones para ejecutar las pruebas
+
+
+1. Abre una terminal en la carpeta del proyecto.
+
+2. Ejecuta el siguiente comando para instalar Jest como una dependencia de desarrollo:
+
+
+```bash
+npm install --save-dev jest
+```
+3. Ejecuta el siguiente comando para ejecutar tus pruebas:
+
+```bash
+npm test
+```
